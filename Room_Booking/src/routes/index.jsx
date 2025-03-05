@@ -1,6 +1,25 @@
 import { Route } from "react-router-dom";
-
-const routes = [];
+import AdminTemplate from "../pages/AdminTemplate";
+import QuanLyNguoiDung from "../pages/AdminTemplate/ThongTin/QuanLyNguoiDung";
+import QuanLyThongTinViTri from "../pages/AdminTemplate/ThongTin/QuanLyViTri";
+import QuanLyThongTinPhong from "../pages/AdminTemplate/ThongTin/QuanLyThongTinPhong";
+const routes = [
+  {
+    path: "admin",
+    element: AdminTemplate,
+    children: [
+      { path: "QuanLyNguoiDung", element: QuanLyNguoiDung },
+      {
+        path: "QuanLyThongTinViTri",
+        element: QuanLyThongTinViTri,
+      },
+      {
+        path: "QuanLyThongTinPhong",
+        element: QuanLyThongTinPhong,
+      },
+    ],
+  },
+];
 
 export const renderRoutes = () => {
   return routes.map((route) => {

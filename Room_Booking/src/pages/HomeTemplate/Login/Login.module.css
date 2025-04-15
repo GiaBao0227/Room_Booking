@@ -1,0 +1,135 @@
+/* src/pages/HomeTemplate/Login/Login.module.css */
+/* Style cơ bản, bạn có thể tùy chỉnh thêm */
+
+.loginContainer {
+    min-height: calc(100vh - 140px);
+    /* Chiều cao trừ header/footer ví dụ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    /* Thêm padding trên dưới */
+    background-color: #f0f2f5;
+}
+
+.loginRow {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Tăng shadow */
+    border-radius: 12px;
+    /* Bo góc nhiều hơn */
+    overflow: hidden;
+}
+
+.brandingCol {
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') center center/cover no-repeat;
+    /* Ảnh nền ví dụ */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* Cho text xuống dưới */
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    /* Tăng chiều cao */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    /* Thêm bóng cho text */
+}
+
+/* Ẩn trên màn hình nhỏ */
+@media (max-width: 767px) {
+    .brandingCol {
+        display: none;
+    }
+
+    .loginRow {
+        max-width: 450px;
+        /* Thu nhỏ row trên mobile */
+    }
+
+    .formCol {
+        border-radius: 12px !important;
+    }
+}
+
+.formCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formWrapper {
+    width: 100%;
+    max-width: 380px;
+    padding: 50px 40px;
+    /* Tăng padding */
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 8px !important;
+    color: #222;
+    font-weight: 700;
+    /* Đậm hơn */
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 32px !important;
+    color: #666;
+}
+
+.loginForm :global(.ant-form-item-label > label) {
+    font-weight: 500;
+    /* Tăng độ đậm label */
+    color: #555;
+}
+
+.loginForm :global(.ant-input-affix-wrapper) {
+    border-radius: 6px;
+    /* Bo góc input */
+}
+
+.loginForm :global(.ant-input-password) {
+    border-radius: 6px;
+    /* Bo góc input password */
+}
+
+.loginButton {
+    border-radius: 6px !important;
+    /* Bo góc nút */
+    /* background-color: #ff385c !important; */
+    /* border-color: #ff385c !important; */
+    /* height: 44px !important; */
+    /* font-size: 1rem !important; */
+}
+
+/* Hover effect */
+.loginButton:not(:disabled):hover {
+    opacity: 0.9;
+}
+
+
+.registerLink {
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.registerLink a {
+    /* color: #ff385c; */
+    /* Màu đỏ airbnb */
+    color: #1890ff;
+    /* Màu xanh AntD */
+    font-weight: 600;
+}
+
+.registerLink a:hover {
+    text-decoration: underline;
+}
